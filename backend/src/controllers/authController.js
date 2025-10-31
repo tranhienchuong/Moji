@@ -52,7 +52,7 @@ export const signUp = async(req, res) => {
 export const signIn = async(req, res) => {
     try {
         // get inputs
-        const {username, password} = req.bpdy;
+        const {username, password} = req.body;
 
         if (!username || !password){
             return res.status(400).json({message: "missing username or password"});
